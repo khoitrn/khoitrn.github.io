@@ -1,12 +1,48 @@
-<!doctype html>
-<html>
-  <head> 
-    <title> ISTM 310 JAMStack</title>
-  </head>
-  <body>
-    <h1> Hello JAM stack</h1>
-    <p>This is my first website in this class </p>
-  </body>
-
-  
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <meta name="description" content="Personal portfolio and class assignment hosted on GitHub Pages." />
+  <style>
+    :root{
+      --bg:#0f1220; --card:#161a2b; --ink:#f1f5f9; --muted:#94a3b8;
+      --brand:#7c5cff; --brand2:#3dd9eb; --ring:rgba(124,92,255,.35);
+      --radius:16px; --shadow:0 20px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;color:var(--ink);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 1200px at 10% -10%, rgba(124,92,255,.15), transparent 50%),
+        radial-gradient(1000px 800px at 90% 10%, rgba(61,217,235,.12), transparent 55%),
+        var(--bg);
+    }
+    .container{width:min(1100px,92%);margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:10;backdrop-filter:blur(6px);
+      background:linear-gradient(180deg,rgba(15,18,32,.8),rgba(15,18,32,.4) 60%,transparent);
+      border-bottom:1px solid rgba(255,255,255,.06)}
+    .header-grid{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:20px}
+    .who{display:flex;align-items:center;gap:14px}
+    .avatar{width:56px;height:56px;border-radius:50%;border:2px solid rgba(255,255,255,.12);display:inline-block}
+    h1{margin:0;font-size:1.6rem;letter-spacing:-.02em}
+    .subtitle{margin:4px 0 0 0;color:var(--muted)}
+    .tags span{display:inline-block;font-size:12px;padding:6px 10px;margin-right:6px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(255,255,255,.02)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:linear-gradient(90deg,var(--brand),var(--brand2));
+      color:#0b1020;text-decoration:none;font-weight:700;border:none;cursor:pointer;box-shadow:0 8px 20px var(--ring)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.ghost{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.18);box-shadow:none}
+    .grid{display:grid;gap:18px}
+    .two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:880px){.two,.three{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .card h2,.card h3{margin-top:0;letter-spacing:-.02em}
+    .highlights{margin:0;padding-left:18px}
+    .project .btn{margin-top:10px}
+    .contact-form{display:grid;gap:12px;max-width:640px}
+    .contact-form label{display:grid;gap:6px;font-weight:600}
+    .contact-form input,.contact-form textarea{
+      padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.14);
