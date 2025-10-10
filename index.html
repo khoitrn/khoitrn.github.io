@@ -31,7 +31,7 @@
     a:hover{color:var(--accent-2)}
     .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
     header{position:relative;padding:42px 0 20px}
-    .hero{border:var(--border);border-radius:var(--radius);background:radial-gradient(600px 280px at 10% 0%,rgba(106,176,255,.15),transparent 60%),linear-gradient(180deg,rgba(18,30,70,.9),rgba(16,25,58,.65));box-shadow:var(--shadow);padding:26px;overflow:hidden}
+    .hero{border:var(--border);border-radius:var(--radius);background:radial-gradient(600px 280px at 10% 0%,rgba(106,176,255,.15),transparent 60%),linear-gradient(180deg,rgba(18,30,70,.9),rgba(16,25,58,.65));box-shadow:var(--shadow);padding:26px;overflow:hidden;text-align:center}
     .hero h1{margin:0;font-size:clamp(28px,4vw,40px);letter-spacing:.2px}
     .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(20,34,80,.8);border:1px solid rgba(140,170,255,.25);color:#cfe5ff;padding:6px 12px;border-radius:999px;font-size:.95rem}
     .sub{color:var(--muted);margin:.4rem 0 0}
@@ -40,6 +40,8 @@
     section .title{display:flex;align-items:center;gap:10px;margin:0 0 8px;font-size:1.25rem}
     .title .dot{width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--accent-2),var(--accent))}
     p{margin:.5rem 0}.small{color:var(--muted);font-size:.95rem}
+    .video-wrap{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;margin-top:10px}
+    .video-wrap video{position:absolute;top:0;left:0;width:100%;height:100%}
     footer{padding:28px 0 40px;color:var(--muted);text-align:center}
   </style>
 </head>
@@ -49,7 +51,7 @@
       <div class="hero">
         <span class="badge">Khoi Tran · ISTM 310</span>
         <h1>Khoi Tran — Portfolio</h1>
-        <p class="sub">AI security, cloud fundamentals, and hands-on experiments with generative tools. Built in a geometric, systems-inspired layout for a clean, resume-ready presentation.</p>
+        <p class="sub">AI security, cloud fundamentals, and generative AI projects.</p>
       </div>
     </div>
   </header>
@@ -77,6 +79,21 @@
     <section id="hobbies">
       <h2 class="title"><span class="dot"></span>Hobbies / Interests</h2>
       <p>I enjoy sports—playing, watching, and following highlights. Outside of sports, I read regularly; right now I’m reading <em>AI in Security</em> to connect technical concepts with real-world applications. I also enjoy building small projects and sharing what I learn with friends and classmates.</p>
+    </section>
+
+    <section id="veo-video">
+      <h2 class="title"><span class="dot"></span>Generative AI Video Experiment</h2>
+      <div class="video-wrap">
+        <video controls>
+          <source src="Cinematic_Swimming_Competition_Video_Generation.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="small"><strong>Tool:</strong> Veo 3. I generated this short clip from a text prompt describing a high‑stakes indoor swim meet in cinematic slow motion with above‑ and below‑surface shots, overhead tracking along the lane lines, and a dramatic final wall touch. I referenced my face for likeness and aimed for realistic motion blur, natural lighting, crisp reflections, and film‑style color.</p>
+      <ul class="small" style="margin:.5rem 0 0 1.1rem;">
+        <li><strong>What I controlled:</strong> camera paths (glide/underwater/overhead), pacing that builds to the last lap, and subject focus (eyes under goggles, surface breaths).</li>
+        <li><strong>Why it matters:</strong> demonstrates how Veo can visualize action, water physics, and identity‑consistent shots for portfolio storytelling.</li>
+      </ul>
     </section>
   </main>
 
